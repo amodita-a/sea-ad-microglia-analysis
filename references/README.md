@@ -9,11 +9,11 @@
 ## CELLxGENE Census
 
 - [CZ CELLxGENE Discover Census documentation](https://chanzuckerberg.github.io/cellxgene-census/)
-- The Census LTS release `2025-11-08` was used to query microglial nuclei and retrieve expression from its normalized RNA layer.
+- The Census was used to query microglial nuclei and retrieve expression from its normalized RNA layer.
 
 ## Donor neuropathology metadata
 
-Donor demographic and neuropathology annotations came from the official SEA-AD donor metadata resource linked on the SEA-AD data and downloads page. The notebook downloads this file programmatically and verifies its expected SHA-256 checksum; the source Excel file is not included in this repository.
+Donor demographic and neuropathology annotations came from the official SEA-AD donor metadata resource linked on the SEA-AD data and downloads page. The source Excel file is not included in this repository.
 
 ## Citation note
 

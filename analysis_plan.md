@@ -12,8 +12,7 @@ Do donor-level microglial interferon-response and antigen-presentation program s
 
 ## Data and analytic sample
 
-- Public Seattle Alzheimer's Disease Brain Cell Atlas data accessed through CELLxGENE Census LTS release `2025-11-08`
-- CELLxGENE dataset ID `c76098ba-eed3-45b1-98f2-96fcac55ed18`
+- Public Seattle Alzheimer's Disease Brain Cell Atlas data accessed through CELLxGENE Census
 - Middle temporal gyrus
 - Microglial nuclei
 - 38,905 nuclei from 84 donors with complete neuropathology metadata
@@ -44,9 +43,7 @@ For each nucleus, each program score was calculated as the mean CELLxGENE normal
 
 1. **Primary analysis:** two-sided Mann-Whitney U comparison of lower- versus higher-pathology donor scores, accompanied by Cliff's delta.
 2. **Ordinal analysis:** Spearman correlation between donor-level score and four-level neuropathology coding.
-3. **Adjusted sensitivity analysis:** donor-level ordinary least squares model including higher-pathology group, age at death, and sex, with HC3 robust standard errors.
-4. **Assay-composition sensitivity:** repeat the adjusted model with the donor-level fraction of multiome nuclei. Assay is represented as a within-donor fraction because 27 donors contain nuclei from both assays, rather than assigning a potentially misleading single assay label to each donor.
-5. **Minimum-nuclei sensitivity:** repeat the donor-level analyses among donors with at least 200 nuclei. This pragmatic threshold retains 77 of 84 donors and is used only as a stability check, not as a validated biological or quality-control cutoff.
+3. **Sensitivity analysis:** donor-level ordinary least squares model including higher-pathology group, age at death, and sex, with HC3 robust standard errors.
 
 ## Interpretation rules
 
