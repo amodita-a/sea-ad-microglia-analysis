@@ -11,7 +11,8 @@ Do donor-level microglial interferon-response and antigen-presentation program s
 ## Dataset
 
 - Seattle Alzheimer's Disease Brain Cell Atlas (SEA-AD)
-- Data accessed through the CZ CELLxGENE Discover Census
+- Data accessed through the CZ CELLxGENE Discover Census LTS release `2025-11-08`
+- CELLxGENE dataset ID: `c76098ba-eed3-45b1-98f2-96fcac55ed18`
 - Brain region: middle temporal gyrus
 - Cell population: microglial nuclei
 - Expression source: CELLxGENE Census normalized layer
@@ -30,7 +31,7 @@ The analysis included 38,905 microglial nuclei from 84 donors with complete neur
 
 All 20 prespecified genes were available in CELLxGENE Census. For each nucleus, a program score was calculated as the mean normalized expression of the genes in that program. Scores were then averaged to the donor level so that individual nuclei were not treated as independent human samples.
 
-The primary comparison used a two-sided Mann-Whitney U test and Cliff's delta for lower versus higher pathology. An ordinal analysis used Spearman correlation with neuropathology coded as Not AD = 0, Low = 1, Intermediate = 2, and High = 3. A sensitivity analysis used donor-level ordinary least squares models adjusted for age at death and sex, with HC3 robust standard errors.
+The primary comparison used a two-sided Mann-Whitney U test and Cliff's delta for lower versus higher pathology. An ordinal analysis used Spearman correlation with neuropathology coded as Not AD = 0, Low = 1, Intermediate = 2, and High = 3. Sensitivity analyses used donor-level ordinary least squares models adjusted for age at death and sex, with HC3 robust standard errors; added the donor-level fraction of multiome nuclei as an assay-composition covariate; and repeated the analyses among donors with at least 200 nuclei. The 200-nucleus threshold is a pragmatic stability check, not a validated biological or quality-control cutoff.
 
 ## Gene programs
 
@@ -52,7 +53,7 @@ The primary comparison used a two-sided Mann-Whitney U test and Cliff's delta fo
 
 Negative Cliff's delta values indicate a tendency toward higher scores in the higher-pathology group because the lower-pathology group was entered first.
 
-In the adjusted sensitivity analysis, higher pathology was positively associated with the interferon-response score (coefficient = 8.956e-06, p = 0.031, 95% CI 8.2e-07 to 1.71e-05). The corresponding antigen-presentation association was not statistically significant (coefficient = 2.307e-05, p = 0.145, 95% CI -7.94e-06 to 5.41e-05).
+In the age- and sex-adjusted sensitivity analysis, higher pathology was positively associated with the interferon-response score (coefficient = 8.956e-06, p = 0.031, 95% CI 8.2e-07 to 1.71e-05). The corresponding antigen-presentation association was not statistically significant (coefficient = 2.307e-05, p = 0.145, 95% CI -7.94e-06 to 5.41e-05). The qualitative conclusions were unchanged after adding multiome fraction and after restricting the analysis to the 77 donors with at least 200 nuclei.
 
 ## Interpretation
 
@@ -66,7 +67,13 @@ Higher-pathology donors showed modestly higher donor-level scores on average, bu
 - Pathology group sizes are unequal (21 lower pathology and 63 higher pathology).
 - Five CELLxGENE donors lacked matching pathology metadata and were excluded.
 - Potential technical and biological covariates were not modeled exhaustively.
+- Assay composition differed across donors; a sensitivity model adjusted for donor-level multiome fraction, but this does not eliminate all technical confounding.
+- The minimum-nuclei analysis used a pragmatic threshold and should not be interpreted as a validated quality-control rule.
 - The adjusted interferon-response finding requires caution because it was not supported by the primary nonparametric analyses and the model residuals were strongly skewed.
+
+## Run the notebook
+
+Open `notebooks/01_sea_ad_exploration.ipynb` in Google Colab and select **Runtime → Run all**. The notebook installs its pinned Python dependencies, downloads the official SEA-AD donor metadata, queries the pinned Census release, and writes figures and the donor-level table under `sea_ad_outputs/`. No manual file upload is required.
 
 ## Repository structure
 
