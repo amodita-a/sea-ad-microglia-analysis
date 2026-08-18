@@ -1,9 +1,20 @@
-# References
+# References and data resources
 
-Scientific papers, dataset documentation, and other sources used for this project will be documented here.
+## SEA-AD project and dataset
 
-## Core Dataset
+- [Seattle Alzheimer's Disease Brain Cell Atlas (SEA-AD): data and downloads](https://brain-map.org/consortia/sea-ad/our-data)
+- SEA-AD is an Allen Institute-led consortium resource developed with the University of Washington and collaborating institutions.
+- The analysis used publicly available SEA-AD single-nucleus RNA-sequencing data from the middle temporal gyrus.
 
-Seattle Alzheimer's Disease Brain Cell Atlas (SEA-AD).
+## CELLxGENE Census
 
-A full citation will be added after the dataset and associated publication have been reviewed.
+- [CZ CELLxGENE Discover Census documentation](https://chanzuckerberg.github.io/cellxgene-census/)
+- The Census was used to query microglial nuclei and retrieve expression from its normalized RNA layer.
+
+## Donor neuropathology metadata
+
+Donor demographic and neuropathology annotations came from the official SEA-AD donor metadata resource linked on the SEA-AD data and downloads page. The source Excel file is not included in this repository.
+
+## Citation note
+
+Before using this work in a manuscript or formal presentation, add the primary SEA-AD publication and the exact dataset citation recommended by the SEA-AD data portal. No DOI has been added here without local verification.
