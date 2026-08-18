@@ -1,2 +1,3 @@
 # Results
-Processed donor-level tables and other analysis outputs will be stored here.
+
+`sea_ad_microglia_donor_results.csv` contains the derived donor-level analysis table. Each of its 84 rows represents one donor.

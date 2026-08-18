@@ -1,2 +1,3 @@
 # Figures
-Final plots and visualizations generated during the analysis will be stored here.
+
+This directory contains the final donor-level interferon-response and antigen-presentation plots. Each point represents one SEA-AD donor.

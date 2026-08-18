@@ -3,8 +3,12 @@
 ## SEA-AD project and dataset
 
 - [Seattle Alzheimer's Disease Brain Cell Atlas (SEA-AD): data and downloads](https://brain-map.org/consortia/sea-ad/our-data)
-- SEA-AD is an Allen Institute-led consortium resource developed with the University of Washington and collaborating institutions.
+- SEA-AD is an [Allen Institute](https://alleninstitute.org/)–led consortium resource developed with the University of Washington and collaborating institutions.
 - The analysis used publicly available SEA-AD single-nucleus RNA-sequencing data from the middle temporal gyrus.
+
+### Primary SEA-AD publication
+
+- Hawrylycz M, et al. *SEA-AD is a multimodal cellular atlas and resource for Alzheimer's disease.* Nature Aging. 2024. [PubMed](https://pubmed.ncbi.nlm.nih.gov/39402332/) | [DOI: 10.1038/s43587-024-00719-8](https://doi.org/10.1038/s43587-024-00719-8)
 
 ## CELLxGENE Census
 
@@ -15,6 +19,4 @@
 
 Donor demographic and neuropathology annotations came from the official SEA-AD donor metadata resource linked on the SEA-AD data and downloads page. The source Excel file is not included in this repository.
 
-## Citation note
-
-Before using this work in a manuscript or formal presentation, add the primary SEA-AD publication and the exact dataset citation recommended by the SEA-AD data portal. No DOI has been added here without local verification.
+For formal reuse, consult the SEA-AD data portal for the citation and acknowledgement instructions associated with the specific downloaded resource.

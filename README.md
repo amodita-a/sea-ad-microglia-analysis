@@ -6,7 +6,7 @@ Microglia participate in immune surveillance and inflammatory responses in the c
 
 ## Research question
 
-Do donor-level microglial interferon-response and antigen-presentation program scores differ between lower- and higher-AD-pathology groups?
+Do donor-level microglial interferon-response and antigen-presentation programs differ across Alzheimer's disease neuropathologic severity in the SEA-AD middle temporal gyrus cohort?
 
 ## Dataset
 
@@ -15,11 +15,11 @@ Do donor-level microglial interferon-response and antigen-presentation program s
 - Brain region: middle temporal gyrus
 - Cell population: microglial nuclei
 - Expression source: CELLxGENE Census normalized layer
-- Neuropathology annotations: official SEA-AD donor metadata resource
+- Neuropathology annotations: official SEA-AD cohort donor metadata, joined to CELLxGENE data by donor ID
 
 ## Cohort and sample
 
-The analysis included 38,905 microglial nuclei from 84 donors with complete neuropathology metadata. Five CELLxGENE donors without matching pathology metadata were excluded.
+The initial CELLxGENE subset contained 40,000 microglial nuclei from 89 donors. Five donors lacked matching official neuropathology metadata, leaving 38,905 nuclei from 84 donors for the pathology analysis.
 
 | Analysis group | Neuropathology categories | Donors |
 | --- | --- | ---: |
@@ -28,9 +28,9 @@ The analysis included 38,905 microglial nuclei from 84 donors with complete neur
 
 ## Analysis overview
 
-All 20 prespecified genes were available in CELLxGENE Census. For each nucleus, a program score was calculated as the mean normalized expression of the genes in that program. Scores were then averaged to the donor level so that individual nuclei were not treated as independent human samples.
+All 20 prespecified genes were available in CELLxGENE Census. For each nucleus, a program score was calculated as the mean normalized expression of the genes in that program. Scores were then averaged to the donor level. Each final observation represents one donor; nuclei were not treated as independent human samples.
 
-The primary comparison used a two-sided Mann-Whitney U test and Cliff's delta for lower versus higher pathology. An ordinal analysis used Spearman correlation with neuropathology coded as Not AD = 0, Low = 1, Intermediate = 2, and High = 3. A sensitivity analysis used donor-level ordinary least squares models adjusted for age at death and sex, with HC3 robust standard errors.
+The primary comparison grouped Not AD and Low as lower pathology and Intermediate and High as higher pathology, using a two-sided Mann-Whitney U test and Cliff's delta. An ordinal analysis used Spearman correlation with neuropathology coded as Not AD = 0, Low = 1, Intermediate = 2, and High = 3. A sensitivity analysis used donor-level ordinary least squares models adjusted for age at death and sex, with HC3 robust standard errors.
 
 ## Gene programs
 
@@ -53,6 +53,14 @@ The primary comparison used a two-sided Mann-Whitney U test and Cliff's delta fo
 Negative Cliff's delta values indicate a tendency toward higher scores in the higher-pathology group because the lower-pathology group was entered first.
 
 In the adjusted sensitivity analysis, higher pathology was positively associated with the interferon-response score (coefficient = 8.956e-06, p = 0.031, 95% CI 8.2e-07 to 1.71e-05). The corresponding antigen-presentation association was not statistically significant (coefficient = 2.307e-05, p = 0.145, 95% CI -7.94e-06 to 5.41e-05).
+
+![Interferon-response program across AD neuropathology](figures/interferon_program_across_ad_pathology.png)
+
+*Interferon-response program scores across the four neuropathology levels. Each point represents one donor.*
+
+![Antigen-presentation program across AD neuropathology](figures/antigen_presentation_across_ad_pathology.png)
+
+*Antigen-presentation program scores across the four neuropathology levels. Each point represents one donor.*
 
 ## Interpretation
 
@@ -78,6 +86,6 @@ results/       Donor-level derived analysis table
 analysis_plan.md
 ```
 
-## Status
+## Status and reproducibility
 
-The educational analysis MVP is complete. Results remain exploratory and have not undergone peer review.
+The educational analysis MVP is complete. The notebook retrieves the public data, constructs donor-level scores, runs the reported analyses, and saves the derived outputs. Results remain exploratory and have not undergone peer review.
