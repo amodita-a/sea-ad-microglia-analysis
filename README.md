@@ -11,7 +11,8 @@ Do donor-level microglial interferon-response and antigen-presentation programs 
 ## Dataset
 
 - Seattle Alzheimer's Disease Brain Cell Atlas (SEA-AD)
-- Data accessed through the CZ CELLxGENE Discover Census
+- Data accessed through the CZ CELLxGENE Discover Census release `2025-11-08`
+- CELLxGENE dataset ID: `c76098ba-eed3-45b1-98f2-96fcac55ed18`
 - Brain region: middle temporal gyrus
 - Cell population: microglial nuclei
 - Expression source: CELLxGENE Census normalized layer
@@ -30,7 +31,7 @@ The initial CELLxGENE subset contained 40,000 microglial nuclei from 89 donors. 
 
 All 20 prespecified genes were available in CELLxGENE Census. For each nucleus, a program score was calculated as the mean normalized expression of the genes in that program. Scores were then averaged to the donor level. Each final observation represents one donor; nuclei were not treated as independent human samples.
 
-The primary comparison grouped Not AD and Low as lower pathology and Intermediate and High as higher pathology, using a two-sided Mann-Whitney U test and Cliff's delta. An ordinal analysis used Spearman correlation with neuropathology coded as Not AD = 0, Low = 1, Intermediate = 2, and High = 3. A sensitivity analysis used donor-level ordinary least squares models adjusted for age at death and sex, with HC3 robust standard errors.
+The primary comparison grouped Not AD and Low as lower pathology and Intermediate and High as higher pathology, using a two-sided Mann-Whitney U test and Cliff's delta. An ordinal analysis used Spearman correlation with neuropathology coded as Not AD = 0, Low = 1, Intermediate = 2, and High = 3. A sensitivity analysis used donor-level ordinary least squares models adjusted for age at death and sex, with HC3 robust standard errors. Additional stability checks adjusted for donor-level multiome fraction and repeated the analyses among donors with at least 200 nuclei; the 200-nucleus threshold is pragmatic rather than a validated quality-control cutoff.
 
 ## Gene programs
 

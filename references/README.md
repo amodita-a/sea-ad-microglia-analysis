@@ -17,6 +17,6 @@
 
 ## Donor neuropathology metadata
 
-Donor demographic and neuropathology annotations came from the official SEA-AD donor metadata resource linked on the SEA-AD data and downloads page. The source Excel file is not included in this repository.
+Donor demographic and neuropathology annotations came from the official SEA-AD donor metadata resource. For reproducibility, the notebook pins the exact workbook URL and verifies its SHA-256 checksum before use. The source Excel file is not included in this repository.
 
 For formal reuse, consult the SEA-AD data portal for the citation and acknowledgement instructions associated with the specific downloaded resource.
